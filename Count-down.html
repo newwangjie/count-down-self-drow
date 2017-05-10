@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>倒计时</title>
+    <script src="js/jquery/jquery.js"></script>
+
+  </head>
+  <body>
+    <div id="box"></div>
+  </body>
+  <script type="text/javascript">
+  function aa() {
+    var oBox = document.getElementById('box');
+    var oDate = new Date();
+    var oY = oDate.setFullYear(2017,10,10);
+    var oM = oDate.setHours(0, 0, 0, 0);
+    function clock() {
+        var iNow = new Date();
+        //毫秒
+        console.log(iNow)
+        var ms = oDate.getTime() - iNow.getTime();
+        console.log(oDate.getTime())
+        console.log(iNow.getTime())
+        //秒
+        var s = parseInt(ms / 1000);
+        console.log(s)
+        //天：
+        var oD = parseInt(s / 86400);
+        console.log(oD)
+        //不够一天剩下的秒数;
+        s = s%86400;
+        //小时
+        var oH = parseInt(s / 3600);
+        //不够一小时剩下的秒数
+        s = s%3600;
+        //分钟
+        var oM = parseInt(s / 60);
+        s = s%60;
+        oBox.innerHTML = '距离2017年10月1日还剩:' + oD + '天' + oH + '时' + oM + '分' + s + '秒';
+    }
+    clock();
+    setInterval(clock, 1000);
+}
+aa();
+  </script>
+</html>
