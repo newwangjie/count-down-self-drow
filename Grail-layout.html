@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>圣杯布局</title>
+  </head>
+  <style media="screen">
+  .layout:after {
+      clear: both;
+      content: " ";
+      display: table;
+   }
+  .layout__aside, .layout__main {
+      float: left;
+   }
+  .layout {
+      padding-left: 210px;
+   }
+  .layout__main {
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      background-color: rgb(23, 169, 153);
+   }
+  .layout__aside {
+      width: 200px;
+      height: 40px;
+      line-height: 40px;
+      margin-left: -210px;
+      background: rgb(70, 154, 227);
+   }
+   /*第二种*/
+   .layout2:after {
+      clear: both;
+      content: " ";
+      display: table;
+    }
+    .layout2 {
+      padding-right: 210px;
+      margin-top: 40px;
+
+    }
+    .layout__main2 {
+      width: 100%;
+      float: left;
+      height: 40px;
+      line-height: 40px;
+      background-color: rgb(23, 169, 153);
+     }
+    .layout__aside2 {
+      float: right;
+      width: 200px;
+      margin-right: -210px;
+      height: 40px;
+      line-height: 40px;
+      background: rgb(70, 154, 227);
+     }
+     /*第三种*/
+     .layout3:after{
+       clear: both;
+       content: " ";
+       display: table;
+     }
+     .layout__aside3,.layout__main3{
+       float: left;
+     }
+     .layout3{
+       padding: 0 210px;
+       margin-top: 40px;
+     }
+     .layout__main3{
+       width: 100%;
+       height: 40px;
+       background-color: rgb(23, 169, 153);
+     }
+     .layout__aside3 {
+        width: 200px;
+    }
+     .layout__aside--left {
+       margin-left: -210px;
+       height: 40px;
+       background: rgb(70, 154, 227);
+     }
+     .layout__aside--right {
+       margin-right: -210px;
+       height: 40px;
+       float: right;
+       background: rgb(70, 154, 227);
+     }
+     /*第四种*/
+     .layout4:after{
+       clear: both;
+       content: " ";
+       display: table;
+     }
+     .layout__aside4, .layout__main4 {
+        float: left;
+      }
+    .layout4 {
+        padding-left: 420px;
+        margin-top: 40px;
+     }
+    .layout__main4 {
+        width: 100%;
+        background-color: rgb(23, 169, 153);
+        height: 40px;
+     }
+    .layout__aside4 {
+        width: 200px;
+        background: rgb(70, 154, 227);
+        height: 40px;
+     }
+    .layout__aside--first {
+        margin-left: -420px;
+     }
+    .layout__aside--second {
+        margin-left: -210px;
+     }
+     /*第五种*/
+     .layout5:after{
+       clear: both;
+       content: " ";
+       display: table;
+     }
+     .layout5{
+       padding-right: 420px;
+       margin-top: 40px;
+     }
+     .layout__main5{
+       float: left;
+       width: 100%;
+       background-color: rgb(23, 169, 153);
+       height: 40px;
+     }
+     .layout__aside5{
+       width: 200px;
+       float: right;
+       height: 40px;
+       background: rgb(70, 154, 227);
+     }
+     .layout__aside--first5{
+       margin-right: -210px;
+     }
+     .layout__aside--second5{
+       margin-right: -420px;
+     }
+  </style>
+  <body>
+    <!-- 第一种 -->
+    <div class="layout">
+      <aside class="layout__aside">侧边栏宽度固定</aside>
+      <div class="layout__main">主内容栏宽度自适应</div>
+    </div>
+    <!-- 第二种 -->
+    <div class="layout2">
+      <div class="layout__main2">主内容栏宽度自适应</div>
+      <aside class="layout__aside2">侧边栏宽度固定</aside>
+    </div>
+    <!-- 第三种 -->
+    <div class="layout3">
+      <aside class="layout__aside3 layout__aside--left">左侧边栏宽度固定</aside>
+      <div class="layout__main3">主内容栏宽度自适应</div>
+      <aside class="layout__aside3 layout__aside--right">右侧边栏宽度固定</aside>
+    </div>
+    <!-- 第四种 -->
+    <div class="layout4">
+      <aside class="layout__aside4 layout__aside--first">第1个侧边栏宽度固定</aside>
+      <aside class="layout__aside4 layout__aside--second">第2个侧边栏宽度固定</aside>
+      <div class="layout__main4">主内容栏宽度自适应</div>
+    </div>
+    <!-- 第五种 -->
+    <div class="layout5">
+      <div class="layout__main5">主内容栏宽度自适应</div>
+      <aside class="layout__aside5 layout__aside--first5">第1个侧边栏宽度固定</aside>
+      <aside class="layout__aside5 layout__aside--second5">第2个侧边栏宽度固定</aside>
+    </div>
+</html>
